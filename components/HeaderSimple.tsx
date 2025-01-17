@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import { Burger, Container, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 const links = [
   { link: '/', label: 'Home' },
@@ -14,7 +16,12 @@ const links = [
 
 export function HeaderSimple() {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const router = useRouter();
+  const [active, setActive] = useState(router.pathname);
+
+  useEffect(() => {
+    setActive(router.pathname);
+  }, [router.pathname]);
 
   const items = links.map((link) => (
     <Link key={link.label} href={link.link} passHref>

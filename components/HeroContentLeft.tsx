@@ -5,6 +5,7 @@ export function HeroContentLeft() {
   return (
     <div className={classes.hero}>
       <Overlay
+        style={{ borderRadius: '40px'}}
         gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
         opacity={1}
         zIndex={0}
