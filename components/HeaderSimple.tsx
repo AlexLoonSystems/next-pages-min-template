@@ -37,15 +37,29 @@ export function HeaderSimple() {
     </Link>
   ));
 
+  const handleLogoClick = () => {
+    router.push('/');
+  };
+
   return (
     <header className={classes.header}>
       <Container size="md" className={classes.inner}>
-        <Image src="/LoonLogo.jpg" alt="Loon logo" width={100} height={30} />
+      <Image
+          src="/LoonLogo.jpg"
+          alt="Loon logo"
+          width={100}
+          height={30}
+          onClick={handleLogoClick}
+          style={{ cursor: 'pointer' }}
+        />
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
 
         <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        <div className={`${classes.burgerMenu} ${opened ? classes.open : ''}`}>
+          {items}
+        </div>
       </Container>
     </header>
   );

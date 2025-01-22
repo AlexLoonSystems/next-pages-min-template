@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Button, Group, Paper, SimpleGrid, Text, Textarea, TextInput } from '@mantine/core';
 import { ContactIconsList } from './ContactIcon';
+import  ReCAPTCHA  from 'react-google-recaptcha';
 import classes from './GetInTouch.module.css';
 
 export function GetInTouch() {
@@ -11,20 +12,32 @@ export function GetInTouch() {
     message: '',
   });
 
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
+  const handleRecaptchaChange = (token: string | null) => {
+    setRecaptchaToken(token);
+  };
+
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    if (!recaptchaToken) {
+      alert('Please complete the reCAPTCHA');
+      return;
+    }
 
     const response = await fetch('/api/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({ ...formData, recaptchaToken }),
     });
 
     if (response.ok) {
@@ -87,6 +100,12 @@ export function GetInTouch() {
               value={formData.message}
               onChange={handleChange}
               minRows={3}
+            />
+
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+              onChange={handleRecaptchaChange}
+              ref={captchaRef}
             />
 
             <Group justify="flex-end" mt="md">

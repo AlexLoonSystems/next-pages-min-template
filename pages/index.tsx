@@ -1,6 +1,8 @@
 import { Button, Group } from "@mantine/core";
 import { HeroContentLeft } from "../components/HeroContentLeft";
 import { HeaderSimple } from "../components/HeaderSimple";
+import { FaqSection } from "../components/FaqSection";
+import { Bullets } from "../components/Bullets";
 
 export default function IndexPage() {
   return (
@@ -8,8 +10,9 @@ export default function IndexPage() {
       <HeaderSimple/>
         <Group mt={50} justify="center">
           <HeroContentLeft />
-          <Button size="xl">Welcome to Loon!</Button>
         </Group>
+        <Bullets />
+        <FaqSection />
     </div>
   );
 }
