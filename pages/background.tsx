@@ -5,7 +5,7 @@ import { CardsCarousel } from "../components/CardsCarousel";
 import { CommentSimple } from "../components/CommentSimple";
 import { HeroRight } from "../components/HeroRight";
 
-export default function ReviewsPage() {
+export default function BackgroundPage() {
   return (
     <div>
       <HeaderSimple/>

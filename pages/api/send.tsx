@@ -37,7 +37,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       const { data, error } = await resend.emails.send({
         from: 'Loon Systems <onboarding@resend.dev>',
-        to: 'alex@loonsystems.com',
+        to: 'matt@loonsystems.com',
         subject: subject,
         html: emailContent,
       });

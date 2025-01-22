@@ -11,7 +11,7 @@ const links = [
   { link: '/', label: 'Home' },
   { link: '/contact', label: 'Contact' },
   { link: '/partners', label: 'Partners' },
-  { link: '/reviews', label: 'Reviews' },
+  { link: '/background', label: 'Background' },
 ];
 
 export function HeaderSimple() {
