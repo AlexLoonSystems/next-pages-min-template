@@ -58,6 +58,8 @@
     border: 1px solid transparent;
     padding: var(--mantine-spacing-xl);
     flex: 0 0 280px;
+    background-image: url('/bg.svg');
+
   
     @media (max-width: $mantine-breakpoint-sm) {
       margin-bottom: var(--mantine-spacing-sm);
