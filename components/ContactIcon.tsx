@@ -25,7 +25,8 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
   );
 }
 
-const MOCKDATA = [
+// Matt Key: Here is where the contact information can be added or removed.
+const MATTDATA = [
   { title: 'Email', description: 'Loonsystems@gmail.com', icon: IconAt },
   { title: 'Phone', description: '+1 (612) 801 9671', icon: IconPhone },
   { title: 'Address', description: 'PO Box', icon: IconMapPin },
@@ -33,6 +34,6 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList() {
-  const items = MOCKDATA.map((item, index) => <ContactIcon key={index} {...item} />);
+  const items = MATTDATA.map((item, index) => <ContactIcon key={index} {...item} />);
   return <Stack>{items}</Stack>;
 }

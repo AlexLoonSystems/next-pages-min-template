@@ -13,6 +13,8 @@ export function PartnerGrid() {
           </Text>{' '}
           to partner with
         </h1>
+        {/* Matt Key: Here is where the partner icons can be added or removed.  The matching named icon must be in the public folder in the root of the project.  */}
+        {/* If an icon is too tall and getting cutoff with the image class, then use the imageTall class as the classname in the image. */}
       <Grid>
         <Grid.Col span={{ base: 12, xs: 12 }} className={styles.grid}><Image src="/Sonicwall.svg" alt='Sonicwall' className={styles.image}/></Grid.Col>
         <Grid.Col span={{ base: 12, xs: 12}} className={styles.gridCol}><Image src="/ionos.png" alt='Ionos' className={styles.image}/></Grid.Col>
