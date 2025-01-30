@@ -102,13 +102,14 @@ export function GetInTouch() {
               minRows={3}
             />
 
+            
+
+            <Group justify="flex-end" mt="md">
             <ReCAPTCHA
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
               onChange={handleRecaptchaChange}
               ref={captchaRef}
             />
-
-            <Group justify="flex-end" mt="md">
               <Button type="submit" className={classes.control}>
                 Send message
               </Button>

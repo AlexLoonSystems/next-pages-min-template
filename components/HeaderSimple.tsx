@@ -47,8 +47,6 @@ export function HeaderSimple() {
       <Image
           src="/LoonLogo.jpg"
           alt="Loon logo"
-          width={100}
-          height={30}
           onClick={handleLogoClick}
           style={{ cursor: 'pointer' }}
         />

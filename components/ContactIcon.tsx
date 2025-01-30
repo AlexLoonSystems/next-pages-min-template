@@ -29,7 +29,7 @@ const MOCKDATA = [
   { title: 'Email', description: 'Loonsystems@gmail.com', icon: IconAt },
   { title: 'Phone', description: '+1 (612) 801 9671', icon: IconPhone },
   { title: 'Address', description: 'PO Box', icon: IconMapPin },
-  { title: 'Working hours', description: '8 a.m. – 11 p.m.', icon: IconSun },
+  { title: 'Working hours', description: '9 a.m. – 6 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {
