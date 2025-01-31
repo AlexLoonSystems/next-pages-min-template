@@ -1,7 +1,8 @@
 import { Button, Group } from "@mantine/core";
-import { HeroContentLeft } from "../components/HeroContentLeft";
 import { HeaderSimple } from "../components/HeaderSimple";
 import { GetInTouch } from "../components/GetinTouch";
+import { Footer } from "../components/Footer";
+
 
 export default function ContactPage() {
   return (
@@ -10,6 +11,7 @@ export default function ContactPage() {
         <Group mt={50} justify="center">
           <GetInTouch />
         </Group>
+      <Footer/>
     </div>
   );
 }

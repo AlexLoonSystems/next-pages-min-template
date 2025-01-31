@@ -1,36 +1,48 @@
 import { AspectRatio, Card, Container, Image, SimpleGrid, Text } from '@mantine/core';
 import classes from './CardsCarousel.module.css';
 
-const mockdata = [
+const projectdata = [
   {
-    title: 'Top 10 places to visit in Norway this summer',
+    title: 'This is a sample project title',
     image:
-      'https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'August 18, 2022',
+      '/project1.png',
+    date: 'August 18, 2024',
   },
   {
-    title: 'Best forests to visit in North America',
+    title: 'Here is another sample project title',
     image:
-      'https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'August 27, 2022',
+      '/project2.jpg',
+    date: 'August 17, 2022',
   },
   {
-    title: 'Hawaii beaches review: better than you think',
+    title: 'Here is a third sample project title',
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
-    date: 'September 9, 2022',
+      '/project3.png',
+    date: 'May 9, 2023',
   },
   {
-    title: 'Mountains at night: 12 best locations to enjoy the view',
+    title: 'And a fourth sample project title',
     image:
-      'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80',
+      '/project4.png',
     date: 'September 12, 2022',
   },
+  // {
+  //   title: 'And a fifth sample project title',
+  //   image:
+  //     '/project5.png',
+  //   date: 'September 12, 2022',
+  // },
+  // {
+  //   title: 'And a 6th sample project title',
+  //   image:
+  //     '/project6.png',
+  //   date: 'September 12, 2022',
+  // },
 ];
 
 export function CardsCarousel() {
-  const cards = mockdata.map((article) => (
-    <Card key={article.title} p="md" radius="md" component="a" href="#" className={classes.card}>
+  const cards = projectdata.map((article) => (
+    <Card key={article.title} p="md" radius="md" component="a" className={classes.card}>
       <AspectRatio ratio={1920 / 1080}>
         <Image src={article.image} />
       </AspectRatio>
@@ -45,6 +57,9 @@ export function CardsCarousel() {
 
   return (
     <Container py="xl">
+      <h1 className={classes.titlehead}>
+        Some of our previous projects    
+      </h1>
       <SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>
     </Container>
   );

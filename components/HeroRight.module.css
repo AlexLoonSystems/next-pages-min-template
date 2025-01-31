@@ -6,6 +6,7 @@
       url('/background.png');
     padding-top: calc(var(--mantine-spacing-xl) * 3);
     padding-bottom: calc(var(--mantine-spacing-xl) * 3);
+    border-radius: 35px;
   }
   
   .inner {

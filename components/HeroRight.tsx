@@ -27,7 +27,7 @@ export function HeroRight() {
               how can you focus on what really matters...
             </Title>
 
-            <Text className={classes.description} mt={30}>
+            <Text className={classes.description} mt="xl" size="xl">
             As a graduate of Dunwoody’s Electrical Program in 2006, I began my career working for a home theater installation company with strong attention to detail.  After several years of witnessing the disconnect between what was often “sold” versus actually implemented, Loon Systems was born. As our business has expanded over the years, our core values have never changed. We pride ourselves with integrity, and do our best deliver our promises.
             </Text>
 
@@ -35,6 +35,7 @@ export function HeroRight() {
               variant="gradient"
               gradient={{ from: 'pink', to: 'yellow' }}
               size="xl"
+              radius="xl"
               className={classes.control}
               mt={40}
               onClick={handleButtonClick}

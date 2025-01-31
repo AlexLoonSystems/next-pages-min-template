@@ -1,7 +1,8 @@
 import { Button, Group } from "@mantine/core";
-import { HeroContentLeft } from "../components/HeroContentLeft";
 import { HeaderSimple } from "../components/HeaderSimple";
 import { PartnerGrid } from "../components/PartnerGrid";
+import { Footer } from "../components/Footer";
+
 
 export default function PartnerPage() {
   return (
@@ -10,6 +11,7 @@ export default function PartnerPage() {
         <Group mt={50} justify="center">
           <PartnerGrid/>
         </Group>
+      <Footer/>
     </div>
   );
 }
