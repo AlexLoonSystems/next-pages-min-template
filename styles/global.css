@@ -17,8 +17,9 @@ body::before {
 
 @media (max-width: 576px) {
   body::before {
-    background-size: cover;
+    position: fixed;
+    background-size: fixed;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }
