@@ -49,7 +49,7 @@ export function HeaderSimple() {
           src="/LoonLogo.jpg"
           alt="Loon logo"
           onClick={handleLogoClick}
-          style={{ cursor: 'pointer' }}
+          style={{ cursor: 'pointer', width: '150px', height: 'auto' }} // Adjust width and height as needed
         />
         <Group gap={5} visibleFrom="xs">
           {items}
