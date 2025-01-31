@@ -9,11 +9,11 @@ export default function IndexPage() {
   return (
     <div>
       <HeaderSimple/>
-        <Group mt={50} justify="center">
-          <HeroContentLeft />
-        </Group>
-        <Bullets />
-        <FaqSection />
+      <Group mt={50} justify="center">
+        <HeroContentLeft />
+      </Group>
+      <Bullets />
+      <FaqSection />
       <Footer/>
     </div>
   );
