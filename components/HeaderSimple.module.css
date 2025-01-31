@@ -38,7 +38,7 @@
     align-items: center;
     background-color: white;
     position: absolute;
-    top: 60px; /* Adjust based on your header height */
+    top: 100px; /* Adjust based on your header height */
     left: 0;
     right: 0;
     z-index: 1000;
