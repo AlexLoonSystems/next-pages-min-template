@@ -18,8 +18,8 @@ body::before {
 @media (max-width: 576px) {
   body::before {
     position: fixed;
-    background-size: auto;
+    background-size: fixed;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
   }
 }
