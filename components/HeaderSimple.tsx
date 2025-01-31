@@ -12,6 +12,7 @@ const links = [
   { link: '/contact', label: 'Contact' },
   { link: '/partners', label: 'Partners' },
   { link: '/background', label: 'Background' },
+  { link: '/projects', label: 'Projects' },
 ];
 
 export function HeaderSimple() {

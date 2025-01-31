@@ -8,7 +8,9 @@ export function Bullets() {
       <div className={classes.inner}>
         <div className={classes.content}>
           <Title className={classes.title}>
-            A <span className={classes.highlight}>modern</span> IT <br /> professional partner
+            A <Text component="span" variant="gradient" gradient={{ from: 'blue', to: 'cyan' }} inherit>
+            modern
+          </Text>{' '}IT <br /> professional partner
           </Title>
           <Text mt="md">
           Whether your needs are immediate or you are seeking an affordable, dependable IT support partner, Loon Systems, Inc. is here for you. Our service plans offer the best solution for smaller organizations that still need comprehensive IT support. We work with you to determine a customized solution, allowing you to stay focused on promoting your business. 

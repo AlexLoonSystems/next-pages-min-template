@@ -13,12 +13,12 @@ export function HeroContentLeft() {
     <div className={classes.hero}>
       <Overlay
         style={{ borderRadius: '40px'}}
-        gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
+        gradient="linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%)"
         opacity={1}
         zIndex={0}
       />
       <Container className={classes.container} size="md">
-        <Title className={classes.title}>Loon Systems is a dynamic IT management company dedicated to providing helpful, fast, and reliable solutions</Title>
+        <Title className={classes.title}>Loon Systems is a technology management company dedicated to providing helpful and reliable solutions</Title>
         <Text className={classes.description} size="xl" mt="xl">
         Specializing in both business and residential environments, Loon Systems consistently goes above and beyond to ensure clients receive exceptional support tailored to their unique needs. Whether addressing complex technical challenges or streamlining everyday IT operations, Loon Systems is committed to delivering excellence and peace of mind.
         </Text>
